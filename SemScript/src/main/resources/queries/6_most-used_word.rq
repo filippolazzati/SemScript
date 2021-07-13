@@ -1,0 +1,5 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+
+SELECT count(?something)
+       WHERE { ?character ex:says ?something.
+               FILTER regex(?something, "Facebook", "i")}

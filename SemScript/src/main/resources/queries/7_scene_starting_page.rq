@@ -1,0 +1,5 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+
+SELECT (min(?page) AS ?number)
+WHERE { ?scene ex:scene_number 0;
+        ex:page ?page.}

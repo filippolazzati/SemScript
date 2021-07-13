@@ -1,0 +1,7 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?page
+WHERE { ?scene ex:scene_number 0.
+        ?scene ex:page ?page.}
+ORDER BY ASC(?page)

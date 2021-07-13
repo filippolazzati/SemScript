@@ -1,0 +1,6 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+
+SELECT ?name
+WHERE { ?character ex:hasName ?name.
+        ?character ex:says ?something.
+        FILTER regex(?something, "(german)", "i")}

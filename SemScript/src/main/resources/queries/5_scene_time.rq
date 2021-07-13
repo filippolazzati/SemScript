@@ -1,0 +1,5 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+
+SELECT ?time
+WHERE { ?scene ex:scene_number 5.
+        ?scene ex:time ?time.}

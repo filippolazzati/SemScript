@@ -1,0 +1,5 @@
+PREFIX ex:      <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#>
+
+SELECT (count(?dualDialogueScene) AS ?times)
+          WHERE { ?dualDialogueScene ex:hasActor1 "EDUARDO".
+                  ?dualDialogueScene ex:hasActor2 "DUSTIN".}
