@@ -1,0 +1,5 @@
+@prefix ex: <http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<the_social_network.ttl> ex:title "The social network"^^xsd:string .
+<marriage_story.ttl> ex:title "Marriage story"^^xsd:string .
