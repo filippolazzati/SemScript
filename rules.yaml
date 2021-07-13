@@ -1,0 +1,140 @@
+prefixes:
+  ex: "http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#"
+  xsd: "http://www.w3.org/2001/XMLSchema#"  
+
+mappings:
+    scene:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '[*].content[*]']
+        s: ex:scene_$(scene_number)
+        po:
+         - p: ex:scene_number
+           o:
+             value: $(scene_number)
+             datatype: xsd:integer
+         - p: ex:location
+           o:
+              value: $(scene_info.location)
+              datatype: xsd:string
+         - p: ex:region
+           o:
+              value: $(scene_info.region)
+              datatype: xsd:string
+         - p: ex:time
+           o:
+              value: $(scene_info.time)
+              datatype: xsd:string
+    scene2:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*]']
+        s: ex:scene_$(content[*].scene_number)
+        po:
+         - p: ex:page
+           o:
+            value: $(page)
+            datatype: xsd:integer
+    scene3:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*]']
+        s: ex:scene_$(content[*].scene_number)
+        po:
+         - [a, ex:Scene]
+    action_scene:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*].content[*]']
+        po:
+         - p: ex:actionDescription
+           o:
+            value: $(text)
+            datatype: xsd:string
+    transition_scene:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        po:
+        - p: ex:transitionDescription
+          o:
+           value: $(content.text)
+           datatype: xsd:string
+    character:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        s: ex:$(content.character)
+        po:
+        - p: ex:hasName
+          o:
+           value: $(content.character)
+           datatype: xsd:string
+        - p: ex:says
+          o:
+           value: $(content.dialogue)
+           datatype: xsd:string
+        - p: ex:hasModifier
+          o:
+           value: $(content.modifier)
+           datatype: xsd:string
+    character1:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        s: ex:$(content.character1.character.character)
+        po:
+        - p: ex:hasName
+          o:
+           value: $(content.character1.character.character)
+           datatype: xsd:string
+        - p: ex:says
+          o:
+           value: $(content.character1.character.dialogue)
+           datatype: xsd:string
+        - p: ex:hasModifier
+          o:
+           value: $(content.character1.character.modifier)
+           datatype: xsd:string
+    character2:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        s: ex:$(content.character2.character.character)
+        po:
+        - p: ex:hasName
+          o:
+           value: $(content.character2.character.character)
+           datatype: xsd:string
+        - p: ex:says
+          o:
+           value: $(content.character2.character.dialogue)
+           datatype: xsd:string
+        - p: ex:hasModifier
+          o:
+           value: $(content.character2.character.modifier)
+           datatype: xsd:string
+    character_scene:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        po:
+         - p: ex:hasActor
+           o:
+                - mapping: character
+                  condition:
+                    function: equal
+                    parameters:
+                        - [str1, $(content.character)]
+                        - [str2, $(content.character)]
+    dual_dialogue_scene:
+        sources:
+         - ['movies/marriage_story.json~jsonpath', '$[*].content[*].scene[*]']
+        po:
+             - p: ex:hasActor1
+               o:
+                - mapping: character1
+                  condition:
+                    function: equal
+                    parameters:
+                        - [str1, $(content.character1.character.character)]
+                        - [str2, $(content.character1.character.character)]
+             - p: ex:hasActor2
+               o:
+                - mapping: character2
+                  condition:
+                    function: equal
+                    parameters:
+                        - [str1, $(content.character2.character.character)]
+                        - [str2, $(content.character2.character.character)]

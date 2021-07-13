@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#"
+     xml:base="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#CharacterScene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#DualDialogueScene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor2">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#DualDialogueScene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#actionDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#actionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ActionScene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasModifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasModifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#page -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#page">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#region">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#says -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#says">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#sceneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#sceneNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#time">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#title">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Movie"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#transitionDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#transitionDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#TransitionScene"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ActionScene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ActionScene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Movie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#CharacterScene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#CharacterScene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#DualDialogueScene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#DualDialogueScene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Movie">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor1"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#hasActor2"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#TransitionScene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#TransitionScene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ActionScene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#CharacterScene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#DualDialogueScene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#TransitionScene"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Character"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#ParticularScene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisabetta&amp;filippo/ontologies/2021/4/SemScript#Scene"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
